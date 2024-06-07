@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '*/20 * * * *'
+    - cron: "*/20 * * * *"
 
 jobs:
   run:
@@ -17,7 +17,7 @@ jobs:
       - name: Setup nodejs
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
       - name: Run script
         run: npm run start:action
         env:
@@ -30,6 +30,21 @@ jobs:
 
           ACCOUNT_2_TG_RAW_DATA: ${{ secrets.ACCOUNT_2_TG_RAW_DATA }}
           ACCOUNT_2_USER_AGENT: ${{ secrets.ACCOUNT_2_USER_AGENT }}
-          
+
+          ACCOUNT_3_TG_RAW_DATA: ${{ secrets.ACCOUNT_3_TG_RAW_DATA }}
+          ACCOUNT_3_USER_AGENT: ${{ secrets.ACCOUNT_3_USER_AGENT }}
+
+          ACCOUNT_4_TG_RAW_DATA: ${{ secrets.ACCOUNT_4_TG_RAW_DATA }}
+          ACCOUNT_4_USER_AGENT: ${{ secrets.ACCOUNT_4_USER_AGENT }}
+
+          ACCOUNT_5_TG_RAW_DATA: ${{ secrets.ACCOUNT_5_TG_RAW_DATA }}
+          ACCOUNT_5_USER_AGENT: ${{ secrets.ACCOUNT_5_USER_AGENT }}
+
+          ACCOUNT_6_TG_RAW_DATA: ${{ secrets.ACCOUNT_6_TG_RAW_DATA }}
+          ACCOUNT_6_USER_AGENT: ${{ secrets.ACCOUNT_6_USER_AGENT }}
+
+          ACCOUNT_7_TG_RAW_DATA: ${{ secrets.ACCOUNT_7_TG_RAW_DATA }}
+          ACCOUNT_7_USER_AGENT: ${{ secrets.ACCOUNT_7_USER_AGENT }}
+
           SHOW_LOGS_MESSAGES: 0
           CLI_PALETTE_VARIANT: "DARK"
