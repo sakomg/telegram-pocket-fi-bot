@@ -46,5 +46,5 @@ jobs:
           ACCOUNT_7_TG_RAW_DATA: ${{ secrets.ACCOUNT_7_TG_RAW_DATA }}
           ACCOUNT_7_USER_AGENT: ${{ secrets.ACCOUNT_7_USER_AGENT }}
 
-          SHOW_LOGS_MESSAGES: 0
+          SHOW_LOGS_MESSAGES: 1
           CLI_PALETTE_VARIANT: "DARK"

@@ -3,7 +3,6 @@ const createApi = require("./api");
 const createLogger = require("./logger");
 const parseApplicationEnvs = require("./environments");
 const utils = require("./utils");
-const { Spinner } = require("./spinner");
 
 const envs = parseApplicationEnvs();
 
@@ -13,7 +12,6 @@ const api = createApi({
 });
 
 const logger = createLogger(envs.CLI_PALETTE_VARIANT);
-const spinner = new Spinner(logger);
 
 /**
  *
@@ -119,9 +117,7 @@ async function processAccount(account) {
 }
 
 async function delayedProcessAccount(account) {
-  spinner.start();
   await utils.randomWait(5000, 9000);
-  spinner.stop();
   return processAccount(account);
 }
 
