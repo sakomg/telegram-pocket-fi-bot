@@ -1,0 +1,35 @@
+name: Claim
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '*/20 * * * *'
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run script
+        run: npm run start:action
+        env:
+          MIN_MINING_AMOUNT: ${{ vars.MIN_MINING_AMOUNT }}
+          REFFERER_URL: ${{ vars.REFFERER_URL }}
+          API_ROOT_URL: ${{ vars.API_ROOT_URL }}
+
+          ACCOUNT_1_TG_RAW_DATA: ${{ secrets.ACCOUNT_1_TG_RAW_DATA }}
+          ACCOUNT_1_USER_AGENT: ${{ secrets.ACCOUNT_1_USER_AGENT }}
+
+          ACCOUNT_2_TG_RAW_DATA: ${{ secrets.ACCOUNT_2_TG_RAW_DATA }}
+          ACCOUNT_2_USER_AGENT: ${{ secrets.ACCOUNT_2_USER_AGENT }}
+          
+          SHOW_LOGS_MESSAGES: 0
+          CLI_PALETTE_VARIANT: "DARK"
