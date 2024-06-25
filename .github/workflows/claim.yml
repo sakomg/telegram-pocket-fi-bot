@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "*/35 * * * *"
+    - cron: "*/45 * * * *"
 
 jobs:
   run:
@@ -45,6 +45,27 @@ jobs:
 
           ACCOUNT_7_TG_RAW_DATA: ${{ secrets.ACCOUNT_7_TG_RAW_DATA }}
           ACCOUNT_7_USER_AGENT: ${{ secrets.ACCOUNT_7_USER_AGENT }}
+
+          ACCOUNT_8_TG_RAW_DATA: ${{ secrets.ACCOUNT_8_TG_RAW_DATA }}
+          ACCOUNT_8_USER_AGENT: ${{ secrets.ACCOUNT_8_USER_AGENT }}
+
+          ACCOUNT_9_TG_RAW_DATA: ${{ secrets.ACCOUNT_9_TG_RAW_DATA }}
+          ACCOUNT_9_USER_AGENT: ${{ secrets.ACCOUNT_9_USER_AGENT }}
+
+          ACCOUNT_10_TG_RAW_DATA: ${{ secrets.ACCOUNT_10_TG_RAW_DATA }}
+          ACCOUNT_10_USER_AGENT: ${{ secrets.ACCOUNT_10_USER_AGENT }}
+
+          ACCOUNT_11_TG_RAW_DATA: ${{ secrets.ACCOUNT_11_TG_RAW_DATA }}
+          ACCOUNT_11_USER_AGENT: ${{ secrets.ACCOUNT_11_USER_AGENT }}
+
+          ACCOUNT_12_TG_RAW_DATA: ${{ secrets.ACCOUNT_12_TG_RAW_DATA }}
+          ACCOUNT_12_USER_AGENT: ${{ secrets.ACCOUNT_12_USER_AGENT }}
+
+          ACCOUNT_13_TG_RAW_DATA: ${{ secrets.ACCOUNT_13_TG_RAW_DATA }}
+          ACCOUNT_13_USER_AGENT: ${{ secrets.ACCOUNT_13_USER_AGENT }}
+
+          ACCOUNT_14_TG_RAW_DATA: ${{ secrets.ACCOUNT_14_TG_RAW_DATA }}
+          ACCOUNT_14_USER_AGENT: ${{ secrets.ACCOUNT_14_USER_AGENT }}
 
           SHOW_LOGS_MESSAGES: 1
           CLI_PALETTE_VARIANT: "DARK"
