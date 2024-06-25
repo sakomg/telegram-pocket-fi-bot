@@ -1,5 +1,5 @@
 /**
- * Parse the environment variables to get the accounts (useragents and raw data)
+ * Parse the environment variables to get the accounts (user-agents and raw data)
  *
  * Example:
  * ACCOUNT_1_USER_AGENT=Mozilla/5.0 (...)
@@ -8,12 +8,12 @@
  * ACCOUNT_2_USER_AGENT=Mozilla/5.0 (...)
  * ACCOUNT_2_TG_RAW_DATA=query_id=2345&user=...
  *
- * @param {*} envs = proccess.env
+ * @param {*} envs = process.env
  *
  * @returns {Array} - Array of accounts
  */
 function parseEnvAccounts(envs) {
-  const accountRegex = /^(ACCOUNT_\d)+_(\S+)/;
+  const accountRegex = /^(ACCOUNT_\d+)_(\S+)/;
   const accounts = {};
 
   for (const key in envs) {
@@ -36,7 +36,7 @@ function parseEnvAccounts(envs) {
  *
  * Parse the environment variable to get the timeouts for the continuous mode
  *
- * @param {*} envs proccess.env
+ * @param {*} envs process.env
  * @returns {Array|undefined} - Array of timeouts
  */
 function parseContiniousModeTimeouts(envs) {
