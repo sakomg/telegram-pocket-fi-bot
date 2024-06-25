@@ -46,9 +46,6 @@ jobs:
           ACCOUNT_7_TG_RAW_DATA: ${{ secrets.ACCOUNT_7_TG_RAW_DATA }}
           ACCOUNT_7_USER_AGENT: ${{ secrets.ACCOUNT_7_USER_AGENT }}
 
-          ACCOUNT_8_TG_RAW_DATA: ${{ secrets.ACCOUNT_8_TG_RAW_DATA }}
-          ACCOUNT_8_USER_AGENT: ${{ secrets.ACCOUNT_8_USER_AGENT }}
-
           ACCOUNT_9_TG_RAW_DATA: ${{ secrets.ACCOUNT_9_TG_RAW_DATA }}
           ACCOUNT_9_USER_AGENT: ${{ secrets.ACCOUNT_9_USER_AGENT }}
 
